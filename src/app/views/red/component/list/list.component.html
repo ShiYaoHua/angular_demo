@@ -1,0 +1,15 @@
+<div class="tj-option" (click)='goDetailClick(item)'>
+    <div class="img-box">
+        <img class="list-img" src='/assets/hcy.jpeg'/>
+    </div>
+    <div class="text-box">
+        <span class="title">{{item.className}}</span>
+        <div class="text-bottom">
+            <div style="color:#a3a3a3;margin-bottom:.5rem">{{item.hostBnchName}}</div>
+            <div class="display-flex">
+                <img width="20px" height="20px" class="clock" src="/assets/clock.png"/>
+                <span class="fz">{{item.endDate}}分钟</span>
+            </div>
+        </div>
+    </div>
+</div>

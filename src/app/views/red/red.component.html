@@ -1,0 +1,25 @@
+<!-- <van-nav-bar title='管理研修院' left-arrow fixed placeholder @click-left='back'></van-nav-bar> -->
+<div class='content'>
+    <div style="display: none;" class="display-flex nav-bar" (click)='back()'>
+        <img src="/assets/back.png" class="back">
+        <span class="flex-grow-1 title">红色研修院</span>
+    </div>
+    <div class='display-flex'>
+        <span class='zp-option' (click)='goSearch(1)'>现任管理干部</span>
+        <span class='zp-option' (click)='goSearch(2)'>新晋管理干部</span>
+        <span class='zp-option' (click)='goSearch(3)'>优秀年轻干部</span>
+    </div>
+    <div>
+        <div class='display-flex title-option'>
+            <span class='title-line'></span>
+            <span class='flex-grow-1'>推荐课程</span>
+            <div class="display-flex" (click)="batchAction()">
+                <img #refreshIcon ref='refreshIcon' class="refresh" src="/assets/refresh.png"/>
+                <span class='refresh-text'>换一批</span>
+            </div>
+        </div>
+        <div class="clearfix" style="margin-right: -1rem;">
+            <app-list *ngFor="let item of recomendList" [item]="item" (goDetail)="goDetail($event)"></app-list>
+        </div>
+    </div>
+</div>
